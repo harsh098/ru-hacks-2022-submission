@@ -22,15 +22,14 @@ async def get_organ_data(organ_name, donor_blood_group):
                     "Organ Name" :  sample[1],
                     "Blood Group of Owner" :  sample[2],
                     "Location" : sample[3],
-                    "Specifications of Organs and Donor" : await extract_specs(sample[4])
+                    "Specifications of Organs and Donor" : extract_specs(sample[4])
                 }
             )
         return return_object
     else:
         return ()
 
-async def extract_specs(json_string):
-    print(json_string)
+def extract_specs(json_string):
     specs = loads(json_string)
     return_string = "\n"
     for x,y in zip(specs.keys() ,  specs.values()):
