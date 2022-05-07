@@ -14,7 +14,7 @@ async def blood(ctx, blood_type: str):
     data = await get_blood_banks(blood_type)
 
     if data:
-        response =  f"{len(data)} results \n"
+        response =  f"{len(data)} samples available \n"
         for sample in data:
             record = "----------------\n"
             for x,y in zip(sample.keys() , sample.values()):
