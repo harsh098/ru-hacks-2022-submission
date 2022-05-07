@@ -12,6 +12,21 @@ async def ping(ctx):
 
 
 @bot.command()
+async def help(ctx):
+    blood_name = ".blood [blood_group]:"
+    blood_desc = "Gives information about available blood banks for the given blood group"
+    organ_name = ".organ [organ_name] [donor_blood_group]:"
+    organ_desc = " Gives information about available organ donation centres,  for the input donor_blood_group and organ_name"
+
+    embed=Embed(title= ".Help",description= 'Commands for the bot.',color= 0x00FFFF,)
+    embed.add_field(name=blood_name , value=blood_desc, inline=False)
+    embed.add_field(name=organ_name , value=organ_desc, inline=False)
+
+
+    await ctx.send(embed=embed)
+
+
+@bot.command()
 async def blood(ctx, blood_type: str):
     data = await get_blood_banks(blood_type)
 
