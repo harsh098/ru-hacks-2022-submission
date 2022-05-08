@@ -75,7 +75,7 @@ You can install it from PyPI:
   $ git clone https://github.com/harsh098/ru-hacks-2022-submission/edit/master/README.md
 ```
 ## Step 2 :- Add environment variables
-Create your Discord Application and generate `API_KEY` using [this link](https://discord.com/developers/applications).  
+Create your Discord Application and generate `API_KEY` using [Discord Developer Portal](https://discord.com/developers/applications).Make sure you generate an OAuth link and add the bot to your server.  
 Now execute the following commands  
 
 ```
