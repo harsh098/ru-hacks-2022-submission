@@ -4,7 +4,7 @@ from apikey import API_KEY
 from blood_bank_data import get_blood_banks
 from organs_data import get_organ_data
 
-bot = commands.Bot(command_prefix='$')
+bot = commands.Bot(command_prefix='.')
 
 @bot.command()
 async def ping(ctx):
@@ -18,7 +18,7 @@ async def help(ctx):
     organ_name = ".organ [organ_name] [donor_blood_group]:"
     organ_desc = " Gives information about available organ donation centres,  for the input donor_blood_group and organ_name"
 
-    embed=Embed(title= ".Help",description= 'Commands for the bot.',color= 0x00FFFF,)
+    embed=Embed(title= "Help",description= 'Commands for the bot.',color= 0x00FFFF,)
     embed.add_field(name=blood_name , value=blood_desc, inline=False)
     embed.add_field(name=organ_name , value=organ_desc, inline=False)
 
