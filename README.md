@@ -14,58 +14,51 @@ Nextcord
 
 To install the library without full voice support, you can just run the following command:
 
-.. code:: sh
-
+```
     # Linux/macOS
     python3 -m pip install -U nextcord
 
     # Windows
     py -3 -m pip install -U nextcord
+```  
 
 Otherwise to get voice support you should run the following command:
 
-.. code:: sh
-
+```
     # Linux/macOS
     python3 -m pip install -U "nextcord[voice]"
 
     # Windows
     py -3 -m pip install -U nextcord[voice]
+```  
 
 To install additional packages for speedup, run the following command:
 
-.. code:: sh
-
+```
     # Linux/macOS
     python3 -m pip install -U "nextcord[speed]"
 
     # Windows
     py -3 -m pip install -U nextcord[speed]
-
+```  
 
 To install the development version, do the following:
 
-.. code:: sh
-
+```
     $ git clone https://github.com/nextcord/nextcord/
     $ cd nextcord
     $ python3 -m pip install -U .[voice]
-    
-    
-    
-----------
+```  
 
-aiosqlite is compatible with Python 3.6 and newer.
+`aiosqlite` is compatible with Python 3.6 and newer.
 You can install it from PyPI:
 
-.. code-block:: bash
-
+```
     $ pip install aiosqlite3
-    
-----------
-    Pysqlite3
-    
-    .. code-block:: bash
+```  
 
-    $ pip3 install pysqlite3
+   `pysqlite3` installation  
+```
+    $ pip install pysqlite3
+```  
 
