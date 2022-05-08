@@ -10,19 +10,23 @@ bot = commands.Bot(command_prefix='.')
 async def ping(ctx):
     await ctx.reply('Pong!')
 
-
+bot.remove_command('help')
 @bot.command()
-async def help(ctx):
-    blood_name = ".blood [blood_group]:"
+async def help(ctx , focus_command:str = ''):
+    blood_name = ".blood <blood_group> :"
     blood_desc = "Gives information about available blood banks for the given blood group"
-    organ_name = ".organ [organ_name] [donor_blood_group]:"
+    organ_name = ".organ <organ_name> <donor_blood_group> :"
     organ_desc = " Gives information about available organ donation centres,  for the input donor_blood_group and organ_name"
-
     embed=Embed(title= "Help",description= 'Commands for the bot.',color= 0x00FFFF,)
-    embed.add_field(name=blood_name , value=blood_desc, inline=False)
-    embed.add_field(name=organ_name , value=organ_desc, inline=False)
-
-
+    if focus_command == '' :
+        embed.add_field(name=blood_name , value=blood_desc, inline=False)
+        embed.add_field(name=organ_name , value=organ_desc, inline=False)
+    elif focus_command == 'blood':
+        embed.add_field(name=blood_name , value=blood_desc, inline=False)
+    elif focus_command == 'organ' :
+        embed.add_field(name=organ_name , value=organ_desc, inline=False)
+    else:
+        embed.add_field(name=focus_command , value="Requested command does not exist", inline=False)
     await ctx.send(embed=embed)
 
 
