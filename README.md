@@ -1,6 +1,7 @@
 # ru-hacks-2022-submission
 
-The purpose of our bot is to develop a database that stores data of organ donors including blood donors, where our a users can access this information and enter their personal health constitutions, once the arguments are entered into the bot, it will then filter out the data according the arguments, thus providing a potential candidate. Our developers had used nextcord to the Discord API and with this connection our bot had various mock potential donor's data inputted inside its lightweight sqlite database with Python as our main programming language. 
+The purpose of our bot is to develop a database that stores data of organ donors including blood donors, where our users can access this information and enter their personal health constitutions, once the arguments are entered into the bot, it will filter out the data according the arguments, and thus providing a potential candidate. Our developers had used `nextcord` library to communicate with the Discord API and `aiosqlite3` to asynchronously access our mock database. This is just a prototype for a potential product pitch at RUHacks 2022 hackathon.  
+
 
 
 
