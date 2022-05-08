@@ -66,7 +66,7 @@ You can install it from PyPI:
 ```  
 
  # Running the bot
- You can directly use this [link](https://discord.com/api/oauth2/authorize?client_id=972315797638770689&permissions=51264&scope=bot) or set it up manually on your system
+ You can directly use this [link](https://discord.com/api/oauth2/authorize?client_id=972315797638770689&permissions=51264&scope=bot) to add the bot to your server or set it up manually on your system
  
    
  
