@@ -6,13 +6,14 @@ The purpose of our bot is to develop a database that stores data of organ donors
 
   
   
----------------
+
 # Getting Started - Dependencies
 
-Nextcord
-----------
+## Nextcord
 
-**Python 3.8 or higher is required**
+**Python 3.8 or higher is required**  
+
+**SQLite3 must be installed**
 
 To install the library without full voice support, you can just run the following command:
 
@@ -64,3 +65,26 @@ You can install it from PyPI:
     $ pip install pysqlite3
 ```  
 
+ # Running the bot
+ You can directly use this [link](https://discord.com/api/oauth2/authorize?client_id=972315797638770689&permissions=51264&scope=bot) or set it up manually on your system
+ 
+   
+ 
+## Step 1 :- Clone the git repo  
+```
+  $ git clone https://github.com/harsh098/ru-hacks-2022-submission/edit/master/README.md
+```
+## Step 2 :- Add environment variables
+Create your Discord Application and generate `API_KEY` using [this link](https://discord.com/developers/applications).  
+Now execute the following commands  
+
+```
+  # Linux/macOS
+    DISCORD_API_KEY = "put your API_KEY here"
+    export DISCORD_API_KEY
+  # Windows
+    setx DISCORD_API_KEY "put your API_KEY here"
+    
+```  
+## Step 3 :- Running the Bot
+Run the `bot.py` file
