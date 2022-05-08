@@ -1,7 +1,6 @@
-from matplotlib.pyplot import text
 from nextcord.ext import commands
 from nextcord import Embed, Colour, Activity, ActivityType
-from apikey import API_KEY
+from os import environ
 from blood_bank_data import get_blood_banks
 from organs_data import get_organ_data
 
@@ -20,7 +19,7 @@ async def help(ctx , focus_command:str = ''):
     blood_name = ".blood <blood_group> :"
     blood_desc = "Gives information about available blood banks for the given blood group"
     organ_name = ".organ <organ_name> <donor_blood_group> :"
-    organ_desc = " Gives information about available organ donation centres,  for the input donor_blood_group and organ_name"
+    organ_desc = " Gives information about available organ donation centres,  for the input donor_blood_group and organ_name.\n If organ name contains spaces add an '\\_' (underscore)"
     ping_name = ".ping"
     ping_desc = "Checks if the bot is online"
     embed=Embed(title= "Help",description= 'Commands for the bot.',color= 0x00FFFF,)
@@ -63,6 +62,7 @@ async def blood(ctx, blood_type: str):
 
 @bot.command()
 async def organ(ctx, organ_name:str, donor_blood_group:str):
+    organ_name = organ_name.replace("_"," ")
     data = await get_organ_data(organ_name , donor_blood_group)
 
     if data:
@@ -84,4 +84,4 @@ async def organ(ctx, organ_name:str, donor_blood_group:str):
     else:
         await ctx.send('Requested organ data is not Available')
     
-bot.run(API_KEY)
+bot.run(environ["DISCORD_API_KEY"])
